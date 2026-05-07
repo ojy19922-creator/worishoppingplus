@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="css/style-normal.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/style-dark.css" type="text/css" data-theme="dark" disabled />
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <title>쇼핑플러스</title>
+</head>
+<body class="media-kk">
+  <div id="index" class="index">
+     <div class="wrap">
+
+            <!--다크모드 테스트 토글-->
+            <label class="mode-toggle">
+                <input type="checkbox" id="modeToggle">
+                <span></span>
+            </label>
+
+      <header class="header">
+        <!-- 상단 네비게이션 -->
+        <nav class="nav" aria-label="상단 내비게이션">
+            <ul class="nav__list">
+                <!-- 뒤로가기 -->
+                <li class="nav__left">
+                    <a class="nav__back" href="index.html" aria-label="뒤로가기">
+                    <img class="nav__icon" src="imgs/chevron-left.svg" alt="" />
+                    </a>
+                </li>
+
+                <!-- 타이틀 -->
+                <li class="nav__center">
+                <p class="nav__title">SHOPPING +</p>
+                </li>
+
+                <!-- 우측 여백(아이콘 자리/공백) -->
+                <li class="nav__right" aria-hidden="true">
+                <span class="nav__spacer"></span>
+                </li>
+            </ul>
+        </nav>
+
+
+      </header>
+      <main class="content content--error" id="content">
+       
+        <section class="error-view" aria-labelledby="errorTitle">
+            <div class="error-view__inner">
+            <h1 class="error-view__title" id="errorTitle">죄송합니다.</h1>
+            <p class="error-view__desc">요청하신 페이지가 원활하지 않습니다.</p>
+
+            <div class="error-view__box" role="note" aria-label="오류 안내">
+                <p class="error-view__message">
+                창을 닫고 다시 시도해 주시면
+                <br />
+                정상적으로 이용할 수 있습니다.
+                <br />
+                궁금하신 점은 고객센터로 문의해 주세요.
+                </p>
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- 풋터 쇼핑플러스 버전 -->
+        <footer class="footer-sign">
+        <div class="footer-sign__row">
+            <p class="footer-sign__brand">PINCRUX</p>
+            <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+        </div>
+        <div class="footer-sign__links">
+            <a href="#" target="_blank" rel="noopener">이용문의</a>
+        </div>
+        </footer>
+        <!-- 플러스콘 ver 풋터 -->
+        <!-- <footer class="footer-sign footer-sign--v2">
+            <div class="footer-sign__row">
+                <p class="footer-sign__brand">PINCRUX</p>
+                <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+            </div>
+
+            <div class="footer-sign__links">
+                <a href="#" target="_blank" rel="noopener">이용문의</a>
+
+                
+                <div class="footer-sign__policies" aria-label="약관 링크">
+                <a class="footer-sign__policy" href="#" target="_blank" rel="noopener">이용약관</a>
+                <a class="footer-sign__policy footer-sign__policy--strong" href="#" target="_blank" rel="noopener">개인정보처리방침</a>
+                </div>
+            </div>
+            </footer> -->
+      </main>
+     </div>
+  </div>
+</body>
+
+<script>
+
+
+
+// 다크모드 테스트
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('modeToggle');
+    const darkCssList = document.querySelectorAll('link[data-theme="dark"]');
+
+    if (!toggle || !darkCssList.length) return;
+
+    const savedMode = localStorage.getItem('darkMode') === 'on';
+    toggle.checked = savedMode;
+
+    darkCssList.forEach(link => {
+      link.disabled = !savedMode;
+    });
+
+    toggle.addEventListener('change', function () {
+      const isDark = this.checked;
+
+      darkCssList.forEach(link => {
+        link.disabled = !isDark;
+      });
+
+      localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+    });
+  });
+
+
+</script>

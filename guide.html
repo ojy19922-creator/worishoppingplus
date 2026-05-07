@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="css/style-normal.css" type="text/css" />
+  <link rel="stylesheet" href="css/style-guide.css" type="text/css" />
+  <link rel="stylesheet" href="css/style-dark.css" type="text/css" data-theme="dark" disabled />
+  <link rel="stylesheet" href="css/theme-wo.css" type="text/css" />
+  <title>쇼핑플러스</title>
+</head>
+<body >
+
+  <div id="index" class="index">
+    <div class="wrap">
+            <!--다크모드 테스트 토글-->
+            <label class="mode-toggle">
+                <input type="checkbox" id="modeToggle">
+                <span></span>
+            </label>
+      
+      <header class="header">
+                <!-- 상단 네비게이션 -->
+        <nav class="nav" aria-label="상단 내비게이션">
+            <ul class="nav__list">
+                <!-- 뒤로가기 -->
+                <li class="nav__left">
+                <a class="nav__back" href="index.html" aria-label="뒤로가기">
+                  <img class="nav__icon" src="imgs/chevron-left.svg" alt="" />
+                </a>
+                </li>
+                <!-- 타이틀 -->
+                <li class="nav__center">
+                <p class="nav__title">이용 가이드</p>
+                </li>
+                <!-- 우측 여백(아이콘 자리/공백) -->
+                <li class="nav__right" aria-hidden="true">
+                <a class="nav__back" href="index.html" aria-label="뒤로가기"  style="display: none;">
+                  <img class="nav__icon" src="imgs/alarm.svg" alt="">
+                </a>
+                </li>
+            </ul>
+        </nav>
+      </header>
+
+       <main class="content" id="content">
+<section class="guide-hero guide-hero--wo" aria-label="쇼핑 혜택 이용 가이드">
+  <div class="guide-hero__inner">
+    <img class="guide-hero__logo" src="guide-img/wologo.svg" alt="우리투자증권 로고" />
+
+    <div class="guide-hero__intro">
+      <p class="guide-hero__title">
+        <span class="guide-hero__title-point">우리투자증권</span> 에서 자주 쓰는<br />
+        쇼핑몰 접속하고 <span class="guide-hero__title-point">리워드 받아가세요.</span>
+      </p>
+      <p class="guide-hero__subtitle">특별한 혜택을 즐겨보세요!</p>
+      <img class="guide-hero__illust" src="guide-img/woicon.svg" alt="" />
+    </div>
+
+    <ol class="guide-steps" aria-label="쇼핑 리워드 이용 순서">
+      <li class="guide-step">
+        <div class="guide-step__inner">
+          <p class="guide-step__badge" aria-hidden="true">STEP.01</p>
+          <div class="guide-step__content">
+            <div class="guide-step__text">
+              <p class="guide-step__title">우리투자증권에서 원하는 쇼핑몰로 이동</p>
+              <p class="guide-step__desc">
+                우리투자증권에서 쇼핑몰로 이동하면<br />
+                결제 금액의 일부를 꿀머니로 적립해드립니다.
+              </p>
+            </div>
+            <img class="guide-step__image" src="guide-img/01.png" alt="" />
+          </div>
+        </div>
+      </li>
+
+      <li class="guide-step">
+        <div class="guide-step__inner">
+          <p class="guide-step__badge" aria-hidden="true">STEP.02</p>
+          <div class="guide-step__content">
+            <div class="guide-step__text">
+              <p class="guide-step__title">쇼핑몰에서 구매하기</p>
+              <p class="guide-step__desc">
+                반드시 우리투자증권을 경유하셔야<br />
+                꿀머니를 안정적으로 받을 수 있습니다.
+              </p>
+            </div>
+            <img class="guide-step__image guide-step__image--tall" src="guide-img/02.png" alt="" />
+          </div>
+        </div>
+      </li>
+
+      <li class="guide-step guide-step--last">
+        <div class="guide-step__inner">
+          <p class="guide-step__badge" aria-hidden="true">STEP.03</p>
+          <div class="guide-step__content">
+            <div class="guide-step__text">
+              <p class="guide-step__title">다다음 달 초에 우리투자증권 꿀머니 적립</p>
+              <p class="guide-step__desc">
+                적립 예정 날짜 기준 다다음 달 초에 꿀머니가 일괄 적립됩니다.<br />
+                지급 예정일이 휴일이면 다음 영업일에 지급돼요.<br />
+                (예: 5월 구매 실적은 7월 초 지급)
+              </p>
+            </div>
+            <img class="guide-step__image" src="guide-img/03.png" alt="" />
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="footer-notice footer-notice--default" aria-label="이용 안내">
+  <h2 class="footer-notice__title">서비스 유의사항</h2>
+  <p class="footer-notice__list">
+    · 쇼핑몰 정책과 프로모션에 따라 적립률 및 적립 시점은 수시로 변경될 수 있습니다. <br />
+    · 적립 금액은 쿠폰, 포인트, 배송비, 할인 혜택, 부가세를 제외한 결제 금액을 기준으로 계산됩니다.<br />
+    · 쇼핑몰 정책에 따라 일 최대 적립금 제한이 있을 수 있습니다.<br />
+    · 상품 구매 취소 시 포인트가 지급되지 않거나 회수될 수 있습니다. 취소가 반복될 경우 재참여가 제한될 수 있습니다.<br />
+    · 다른 제휴사에서 ‘쇼핑하러 가기’를 경유한 경우에는 포인트 적립 대상에서 제외됩니다.<br />
+    · 해당 프로모션은 쇼핑몰 광고의 중개이며 쇼핑몰에서 판매하는 상품 또는 적립 여부에 책임이 없습니다.<br />
+    · 광고 차단 어플리케이션 또는 서버 우회 등의 방법을 이용하여 접속 시 제외될 수 있습니다.<br />
+    · 아이폰(iOS)의 경우 APP 추적을 허용으로 설정하셔야 적립이 가능합니다.(아이폰 – 설정 – 네이버페이 &amp; 사파리 - 추적허용)
+  </p>
+</section>
+            <!-- 플러스콘 버전 유의사항-->
+            <!-- <section class="footer-notice footer-notice--default" aria-label="이용 안내">
+  <h2 class="footer-notice__title">서비스 유의사항</h2>
+  <p class="footer-notice__list">
+            · 적립된 포인트의 유효기간은 적립일로부터 1년이며, 적립 내역 또한 1년간 안전하게 보관됩니다.<br/>
+            · 내역의 날짜는 구매 또는 주문일 기준입니다.<br/>
+            · 구매 이후 이용 내역에 반영까지 다소 시간이 소요 될 수 있습니다. <br/>
+            · 구매후 취소/반품/환불하거나 쿠팡의 정책이 변경되면 적립이 취소되거나 적립 포인트가 변경될 수 있습니다.<br/>
+            · 적립한도, 적립율, 적립 시기, 적립 제외 상품 등은 수시로 변경될 수 있으니 각 쇼핑몰 상세 내용을 확인해주세요. <br/>
+            · 적립이 정상적으로 이루어지지 않는 경우 상단 문의하기를 통해 알려주세요.
+            </p>
+            </section> -->
+
+<!-- 우리투자증권 유의사항 -->
+<section class="footer-notice footer-notice--wo" aria-label="이용 안내">
+<h2 class="footer-notice__title">서비스 유의사항</h2>
+<p class="footer-notice__lead">서비스 이용 안내</p>
+<p class="footer-notice__list">
+· 이 서비스는 우리투자증권 일반종합계좌를 보유한 개인 고객을 대상으로 하며, 제휴 혜택에 대한 리워드로 포인트를 적립해 드리는 서비스입니다.
+<br />
+· 우리투자증권은 제휴 쇼핑몰에서 판매하는 상품의 품질, 배송, 교환/환불 등에 대해 직접적인 책임을 지지 않으며, 상품 관련 문의는 해당 판매처를 이용해 주시기 바랍니다.
+<br />
+· 본 서비스는 제휴사 ㈜핀크럭스와의 제휴를 통해 제공됩니다. 서비스 이용 중 발생하는 시스템 오류, 적립 누락 등 모든 문의사항은 핀크럭스 고객센터를 이용해 주시기 바랍니다. 
+</p>
+<p class="footer-notice__lead">적립 기준 및 유의사항</p>
+<p class="footer-notice__list">
+· 적립 기준: 적립률, 적립 제외 상품, 적립 시점 등은 각 제휴 쇼핑몰의 정책과 프로모션에 따라 수시로 변경될 수 있으므로, 이용 전 각 쇼핑몰의 상세 안내를 확인해 주시기 바랍니다.<br/>
+· 산정 방식: 적립 금액은 쿠폰, 포인트 사용액, 배송비, 할인 금액, 부가세를 제외한 실제 결제 금액을 기준으로 계산됩니다.<br/>
+· 누락 접수: 구매/구매확정 후 1시간 이내에 적립 예정 꿀머니가 조회되지 않거나, 적립 제외 항목이 아님에도 누락된 경우 [구매 영수증, 구매 일시, 구매 상품명]을 첨부하여 핀크럭스 고객센터로 문의해 주시기 바랍니다.<br/>
+· 기술적 유의 사항: 사이트 내 ‘추적 허용’ 금지, ‘쿠키’ 수집 미동의, ‘광고 차단 프로그램’ 설치 및 아이폰(iOS) ‘콘텐츠 차단’ 기능이 활성화된 경우 적립 대상에서 누락될 수 있습니다. 반드시 해당 설정을 확인 및 해제 후 이용하시기 바랍니다.<br/>
+</p>
+
+<p class="footer-notice__lead">지급 시기 및 내역 관리</p>
+<p class="footer-notice__list">
+· 지급 시기: <span class="footer-notice__accent">꿀머니는 구매일 기준으로 다음 달 말일까지 구매 실적을 집계하여, 다다음 달 초 영업일에 일괄 지급됩니다. 단, 지급 예정일이 휴일인 경우 다음 영업일에 지급됩니다.</span><br/>
+  · 내역 보관: 적립 내역은 최근 3개월간 제공됩니다. 제휴 서비스 탈퇴 시 적립 내역은 즉시 파기되어 복구가 불가능합니다.
+</p>
+
+<p class="footer-notice__lead">취소 및 포인트 회수 정책</p>
+<p class="footer-notice__list">
+· 경유 조건: <span class="footer-notice__accent">우리WON뱅킹 유니버설뱅킹 주식서비스에서 제휴 쇼핑몰로 이동하여 구매한 내역만 합산 적립되며, 다른 사이트나 앱을 경유하여 구매한 경우는 적립 대상에서 제외됩니다.</span><br/>
+· 취소 규정: 제휴 쇼핑몰에서 구매 후 취소하거나, 포인트 적립 전 서비스를 탈퇴할 경우 지급 예정 꿀머니는 회수됩니다.  
+  <span class="footer-notice__indent">
+    - 부분 취소 유의: 주문 상품 중 일부를 취소하는 경우에도 해당 주문 건에 대한 포인트는 전액 회수됩니다. 잦은 취소가 반복될 경우 서비스 재참여가 제한될 수 있습니다.
+  </span>
+· 한도: 1일 최대 적립 한도 제한은 없으나, 추후 내부 정책에 따라 변경될 수 있습니다.
+</p>
+
+
+<p class="footer-notice__lead">꿀머니(포인트) 안내</p>
+<p class="footer-notice__list">
+· 꿀머니란?  우리금융그룹 통합 멤버십 포인트로 1꿀=1원의 가치를 가지며, 1꿀 이상부터 계좌 입금 등으로 현금처럼 사용 가능합니다.<br/>
+· 필수 조건: 꿀머니 적립을 위해서는 ‘우리WON멤버스’ 가입이 필수이며, 원활한 적립을 위해 위수탁 업체(우리카드)에 고객 정보(휴대폰 번호)가 제공됩니다. <br/>
+· 정보 확인:  <span class="footer-notice__accent">고객 정보(고객명, 연락처) 불일치 시 지급이 제한될 수 있으니 최신 정보로 유지해 주시기 바랍니다.</span><br/>
+· 부정 적립: 부정한 방법(어뷰징 등)으로 포인트를 취득하거나 적립 원인이 취소된 경우, 사전 통보 없이 회수될 수 있습니다. 해당 행위 적발 시 서비스 이용 제한 및 법적 조치가 취해질 수 있습니다.<br/>
+· 기타: 금융감독 당국의 권고, 금융사고, 기타 소비자 보호 사유 발생 시 적립 한도가 축소될 수 있습니다.
+</p>
+<p class="footer-notice__lead">[투자 유의사항]</p>
+<p class="footer-notice__list">
+· 투자자는 금융투자상품에 대하여 우리투자증권으로부터 충분한 설명을 받을 권리가 있으며, 투자 전 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.<br/>
+· 이 금융상품은 예금자보호법에 따라 보호되지 않습니다.<br/>
+· 금융투자상품은 투자원금의 손실이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.
+</p>
+
+<p class="footer-notice__list footer-notice__list--center">
+우리투자증권 준법감시인 심사필 제2026-094호<br/>(2026.04.07.~2027.04.06.)
+</p>
+</section>
+
+<!-- 풋터 쇼핑플러스 버전 -->
+<footer class="footer-sign footer-sign--default">
+  <div class="footer-sign__row">
+    <p class="footer-sign__brand">PINCRUX</p>
+    <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+  </div>
+
+  <div class="footer-sign__links">
+    <a href="#" target="_blank" rel="noopener">이용문의</a>
+  </div>
+</footer>
+<!-- 플러스콘 ver 풋터 -->
+<!-- <footer class="footer-sign footer-sign--v2">
+    <div class="footer-sign__row">
+        <p class="footer-sign__brand">PINCRUX</p>
+        <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+    </div>
+<div class="footer-sign__links">
+        <a href="#" target="_blank" rel="noopener">이용문의</a>
+    <div class="footer-sign__policies" aria-label="약관 링크">
+        <a class="footer-sign__policy" href="#" target="_blank" rel="noopener">이용약관</a>
+        <a class="footer-sign__policy footer-sign__policy--strong" href="#" target="_blank" rel="noopener">개인정보처리방침</a>
+    </div>
+</div>
+</footer> -->
+<!-- 우리투자증권 -->
+<footer class="footer-sign footer-sign--v2 footer-sign--wo">
+  <div class="footer-sign__row">
+    <p class="footer-sign__brand">PINCRUX</p>
+    <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+  </div>
+
+  <div class="footer-sign__links">
+    <a href="#" target="_blank" rel="noopener">이용문의</a>
+
+    <div class="footer-sign__policies" aria-label="부가 링크">
+      <a class="footer-sign__policy footer-sign__policy--strong" href="#" target="_blank" rel="noopener">서비스해지하기</a>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-cta" role="region" aria-label="안내 확인">
+  <button type="button" class="floating-cta__btn" aria-label="안내 확인했어요">
+    <p class="floating-cta__text">
+      <span>확인했어요</span>
+    </p>
+  </button>
+</div>
+        
+
+
+       </main>
+    </div>
+  </div>
+</body>
+<script>
+      // 다크모드 테스트
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('modeToggle');
+    const darkCssList = document.querySelectorAll('link[data-theme="dark"]');
+
+    if (!toggle || !darkCssList.length) return;
+
+    const savedMode = localStorage.getItem('darkMode') === 'on';
+    toggle.checked = savedMode;
+
+    darkCssList.forEach(link => {
+      link.disabled = !savedMode;
+    });
+
+    toggle.addEventListener('change', function () {
+      const isDark = this.checked;
+
+      darkCssList.forEach(link => {
+        link.disabled = !isDark;
+      });
+
+      localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+    });
+  });
+
+//   다크모드 가이드페이지
+function updateDarkImages(isDark) {
+    const targets = document.querySelectorAll('[data-dark-src]');
+
+    targets.forEach((img) => {
+      const nextSrc = isDark ? img.dataset.darkSrc : img.dataset.lightSrc;
+      if (nextSrc) img.src = nextSrc;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('modeToggle');
+    const darkCssList = document.querySelectorAll('link[data-theme="dark"]');
+
+    if (!toggle || !darkCssList.length) return;
+
+    const savedMode = localStorage.getItem('darkMode') === 'on';
+    toggle.checked = savedMode;
+
+    darkCssList.forEach(link => {
+      link.disabled = !savedMode;
+    });
+
+    updateDarkImages(savedMode);
+
+    toggle.addEventListener('change', function () {
+      const isDark = this.checked;
+
+      darkCssList.forEach(link => {
+        link.disabled = !isDark;
+      });
+
+      updateDarkImages(isDark);
+      localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+    });
+  });
+</script>
+
+
