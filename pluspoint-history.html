@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="css/style-normal.css" type="text/css" />
+  <link rel="stylesheet" href="css/style-plushistory.css" type="text/css" />
+    <link rel="stylesheet" href="css/style-dark.css" type="text/css" data-theme="dark" disabled />
+  <link rel="stylesheet" href="css/theme-wo.css" type="text/css" />
+  <title>쇼핑플러스 적립내역</title>
+</head>
+<body>
+  <div id="index" class="index">
+    <div class="wrap">
+
+            <!--다크모드 테스트 토글-->
+            <label class="mode-toggle">
+                <input type="checkbox" id="modeToggle">
+                <span></span>
+            </label>
+
+      <header class="header">
+          <nav class="nav" aria-label="상단 내비게이션">
+            <ul class="nav__list">
+                
+                <li class="nav__left">
+                <a class="nav__back" href="index.html" aria-label="뒤로가기">
+                  <img class="nav__icon" src="imgs/chevron-left.svg" alt="" />
+                </a>
+                </li>
+                
+                <li class="nav__center">
+                <p class="nav__title">적립 내역</p>
+                </li>
+
+                
+                <li class="nav__right" aria-hidden="true">
+                <span class="nav__spacer"></span>
+                </li>
+            </ul>
+        </nav>
+      </header>
+      <main class="content" id="content">
+
+
+        <div class="point-history">
+        <!-- ✅ sticky 감지용 sentinel -->
+        <div class="controls-sentinel" aria-hidden="true"></div>
+
+        <!-- ✅ 상단 컨트롤 영역(탭 + month-picker) -->
+        <div class="point-history__controls" id="history-controls">
+            <!-- Segmented Tabs -->
+            <div class="segmented" role="tablist" aria-label="적립/사용 전환">
+            <button type="button" class="segmented__tab is-active" role="tab" aria-selected="true" data-view="earn">
+                적립
+            </button>
+            <button type="button" class="segmented__tab" role="tab" aria-selected="false" data-view="use">
+                사용
+            </button>
+            <span class="segmented__thumb" aria-hidden="true"></span>
+            </div>
+
+            <!-- Month Picker -->
+            <div class="month-picker" aria-label="월 선택">
+            <button type="button"
+                    class="month-picker__trigger"
+                    aria-label="월 선택 열기"
+                    aria-expanded="false"
+                    aria-controls="month-sheet"
+                    data-month-trigger>
+                <p class="month-picker__ym">
+                <span class="month-picker__year">2026.</span>
+                <span class="month-picker__month">02.</span>
+                </p>
+                <span class="month-picker__icon-hit" aria-hidden="true">
+                <img class="month-picker__icon" src="imgs/chevron-down.svg" alt="" />
+                </span>
+            </button>
+
+            <p class="month-picker__range">(02.01~02.28)</p>
+            </div>
+        </div>
+        <!-- ✅ 적립/사용 리스트 영역 -->
+        <div class="point-history__list" aria-label="포인트 내역 리스트">
+
+        <!-- ✅ 적립 패널 -->
+        <!-- 리스트 안에 있는 해당 월&일자도 02.01/03.04로 표시 -->
+        <div data-panel="earn">
+            <ul class="history-list">
+            <!-- 소멸일때 -->
+            <li class="history-item history-item--expired">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                    <p class="history-item__merchant">알리익스프레스</p>
+                    <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                    <p class="history-item__amount">
+                        <span class="history-item__sign">-</span>
+                        <span class="history-item__value">13,222</span>
+                        <span class="history-item__unit">P</span>
+                    </p>
+                    <p class="history-item__state">소멸</p>
+                </div>
+            </li>
+                
+            <li class="history-item history-item--earned">
+                <p class="history-item__date">02.02</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">쿠팡</p>
+                <p class="history-item__time">15:41:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">캐시</span>
+                </p>
+                <p class="history-item__state">적립</p>
+                </div>
+            </li>
+
+            <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+                        <li class="history-item history-item--pending">
+                <p class="history-item__date">02.28</p>
+
+                <div class="history-item__mid">
+                <p class="history-item__merchant">알리익스프레스</p>
+                <p class="history-item__time">15:50:20</p>
+                </div>
+
+                <div class="history-item__right">
+                <p class="history-item__amount">
+                    <span class="history-item__sign">+</span>
+                    <span class="history-item__value">13,222</span>
+                    <span class="history-item__unit">P</span>
+                </p>
+                <p class="history-item__state">적립 예정</p>
+                </div>
+            </li>
+            </ul>
+        </div>
+
+        <!-- ✅ 사용 패널 -->
+        <!-- 리스트 안에 있는 해당 월&일자도 02.01/03.04로 표시 -->
+        <div data-panel="use" hidden>
+            <ul class="use-list">
+            <li class="use-item">
+                <p class="use-item__date">02.02</p>
+
+                <div class="use-item__body">
+                <div class="use-item__left">
+                    <!-- 텍스트 2줄 넘어갈시 말줄임표 표시 -->
+                    <p class="use-item__title">
+                    (모바일쿠폰)마이케이티-스타벅스 아메리카노 4,700 모바일쿠폰 교환
+                    </p>
+                    <p class="use-item__time">15:41:20</p>
+                </div>
+
+                <div class="use-item__right">
+                    <p class="use-item__amount">
+                    <span class="use-item__sign">-</span>
+                    <span class="use-item__value">13,222</span>
+                    <span class="use-item__unit">P</span>
+                    </p>
+                    <p class="use-item__state">구매 시 사용</p>
+                </div>
+                </div>
+            </li>
+
+            <li class="use-item">
+                <p class="use-item__date">02.28</p>
+
+                <div class="use-item__body">
+                <div class="use-item__left">
+                    <p class="use-item__title">
+                    (모바일쿠폰)마이케이티-스타벅스 아메리카노 4,700 모바일쿠폰 교환
+                    </p>
+                    <p class="use-item__time">15:41:20</p>
+                </div>
+
+                <div class="use-item__right">
+                    <p class="use-item__amount">
+                    <span class="use-item__sign">-</span>
+                    <span class="use-item__value">13,222</span>
+                    <span class="use-item__unit">P</span>
+                    </p>
+                    <p class="use-item__state">구매 시 사용</p>
+                </div>
+                </div>
+            </li>
+            
+            </ul>
+        </div>
+
+        </div>
+
+        </div>
+      </main>
+
+
+
+<section class="footer-notice" aria-label="이용 안내">
+<h2 class="footer-notice__title">알려드려요</h2>
+<p class="footer-notice__list">
+· 적립 내역은 최대 1년간 보관됩니다. <br/>
+· 적립 내역은 최대 3개월 보관됩니다.<br/>
+· 내역의 날짜는 구매 또는 주문일 기준입니다.<br/>
+· 구매 이후 이용 내역에 반영까지 다소 시간이 소요 될 수 있습니다.<br/>
+· 구매 후 취소/반품/환불하거나 쇼핑몰의 정책이 변경되면 적립이 취소되거나 적립 포인트가 변경될 수 있습니다.<br/>
+· 적립 한도, 적립율, 적립 시기, 적립 제외 상품 등은 수시로 변경될 수 있으니 각 쇼핑몰 상세 내용을 확인해주세요.<br/>
+· 적립이 정상적으로 이루어지지 않는 경우 하단 이용문의를 통해 문의하세요.<br/>
+</p>
+
+        </section>
+        <!-- 풋터 쇼핑플러스 버전 -->
+        <!-- <footer class="footer-sign">
+        <div class="footer-sign__row">
+            <p class="footer-sign__brand">PINCRUX</p>
+            <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+        </div>
+        <div class="footer-sign__links">
+            <a href="#" target="_blank" rel="noopener">이용문의</a>
+        </div>
+        </footer> -->
+        <!-- 플러스콘 ver 풋터 -->
+        <footer class="footer-sign footer-sign--v2">
+            <div class="footer-sign__row">
+                <p class="footer-sign__brand">PINCRUX</p>
+                <p class="footer-sign__copy">Copyright PINCRUX. All rights reserved.</p>
+            </div>
+
+            <div class="footer-sign__links">
+                <a href="#" target="_blank" rel="noopener">이용문의</a>
+
+                
+                <div class="footer-sign__policies" aria-label="약관 링크">
+                <a class="footer-sign__policy" href="#" target="_blank" rel="noopener">이용약관</a>
+                <a class="footer-sign__policy footer-sign__policy--strong" href="#" target="_blank" rel="noopener">개인정보처리방침</a>
+                </div>
+            </div>
+            </footer>
+
+    </div>
+  </div>
+</body>
+
+<!-- ✅ Bottom Sheet -->
+<div class="sheet" id="month-sheet" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sheet__dim" data-month-close aria-hidden="true"></div>
+
+  <div class="sheet__panel" role="document" aria-label="조회 기간 선택">
+    <div class="sheet__head">
+      <p class="sheet__title">조회 기간 선택</p>
+
+      <button type="button" class="sheet__close" aria-label="닫기" data-month-close>
+        <img class="sheet__close-icon" src="imgs/xicon-b.svg" alt="" />
+      </button>
+    </div>
+
+    <ul class="sheet__list" role="radiogroup" aria-label="월 목록">
+      <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-01" name="month" type="radio" checked />
+        <label class="sheet__label" for="m-2026-01">
+          <span class="sheet__label-text">2026년 01월</span>
+          
+        </label>
+      </li>
+
+      <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-02" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-02">
+          <span class="sheet__label-text">2026년 02월</span>
+        </label>
+      </li>
+
+      <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-03" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-03">
+          <span class="sheet__label-text">2026년 03월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-04" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-04">
+          <span class="sheet__label-text">2026년 04월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-05" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-05">
+          <span class="sheet__label-text">2026년 05월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-06" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-06">
+          <span class="sheet__label-text">2026년 06월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-07" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-07">
+          <span class="sheet__label-text">2026년 07월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-08" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-08">
+          <span class="sheet__label-text">2026년 08월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-09" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-09">
+          <span class="sheet__label-text">2026년 09월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-10" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-10">
+          <span class="sheet__label-text">2026년 10월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-11" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-11">
+          <span class="sheet__label-text">2026년 11월</span>
+          
+        </label>
+      </li>
+            <li class="sheet__item">
+        <input class="sheet__radio" id="m-2026-12" name="month" type="radio" />
+        <label class="sheet__label" for="m-2026-12">
+          <span class="sheet__label-text">2026년 12월</span>
+          
+        </label>
+      </li>
+    </ul>
+
+    <div class="sheet__actions">
+      <button type="button" class="sheet__submit" data-month-apply>선택하기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Bottom Sheet =====
+const openBtn = document.querySelector("[data-month-trigger]");
+const sheet = document.getElementById("month-sheet");
+const closeEls = sheet?.querySelectorAll("[data-month-close]") || [];
+const applyBtn = sheet?.querySelector("[data-month-apply]");
+
+// 월 표시 영역
+const yearEl = document.querySelector(".month-picker__year");
+const monthEl = document.querySelector(".month-picker__month");
+
+function openSheet(){
+  if (!sheet) return;
+  sheet.classList.add("is-open");
+  sheet.setAttribute("aria-hidden", "false");
+  openBtn?.setAttribute("aria-expanded", "true");
+}
+
+function closeSheet(){
+  if (!sheet) return;
+  sheet.classList.remove("is-open");
+  sheet.setAttribute("aria-hidden", "true");
+  openBtn?.setAttribute("aria-expanded", "false");
+}
+
+function applySelectedMonth(){
+  if (!sheet) return;
+  const checked = sheet.querySelector('input[name="month"]:checked');
+  if (!checked) return;
+
+  const label = sheet.querySelector(`label[for="${checked.id}"] .sheet__label-text`)
+            || sheet.querySelector(`label[for="${checked.id}"]`);
+  const text = (label?.textContent || "").trim();
+  if (!text) return;
+
+  const m = text.match(/(\d{4})\s*년\s*(\d{1,2})\s*월/);
+  if (!m) return;
+
+  if (yearEl) yearEl.textContent = `${m[1]}.`;
+  if (monthEl) monthEl.textContent = `${m[2]}.`;
+}
+
+openBtn?.addEventListener("click", openSheet);
+closeEls.forEach(el => el.addEventListener("click", closeSheet));
+applyBtn?.addEventListener("click", () => {
+  applySelectedMonth();
+  closeSheet();
+});
+
+
+// ===== ✅ Controls sticky 감지 (탭+month-picker 같이) =====
+const controls = document.querySelector(".point-history__controls");
+const controlsSentinel = document.querySelector(".controls-sentinel");
+
+if (controls && controlsSentinel) {
+  const io = new IntersectionObserver(
+    ([entry]) => {
+      controls.classList.toggle("is-stuck", entry.intersectionRatio === 0);
+    },
+    { threshold: [0, 1] }
+  );
+  io.observe(controlsSentinel);
+}
+
+
+// ===== Tabs =====
+const tabsWrap = document.querySelector(".segmented");
+const tabs = document.querySelectorAll(".segmented__tab");
+const panels = document.querySelectorAll("[data-panel]");
+
+function setView(view){
+  tabsWrap?.classList.toggle("is-use", view === "use");
+
+  tabs.forEach(btn => {
+    const active = btn.dataset.view === view;
+    btn.classList.toggle("is-active", active);
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+  });
+
+  panels.forEach(p => {
+    p.hidden = p.dataset.panel !== view;
+  });
+}
+
+tabs.forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
+setView("earn");
+
+
+// nav 없을때 최상단
+(function(){
+  const root = document.documentElement;
+
+  function isVisible(el){
+    if (!el) return false;
+    const style = getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden') return false;
+    const rect = el.getBoundingClientRect();
+    return rect.height > 0;
+  }
+
+  // ✅ header/nav 높이를 재서 --header-h 업데이트
+  function setHeaderH(){
+    const header = document.querySelector('.header');
+    const nav = header ? header.querySelector('.nav') : null;
+
+    const h = (nav && isVisible(nav))
+      ? Math.round(nav.getBoundingClientRect().height)
+      : 0;
+
+    root.style.setProperty('--header-h', h + 'px');
+  }
+
+  // ✅ controls sticky 상태 감지해서 is-stuck 토글
+  function bindControlsStuck(){
+    const controls = document.querySelector('.point-history__controls');
+    const sentinel = document.querySelector('.controls-sentinel');
+    if (!controls || !sentinel) return;
+
+    // Safari 포함 안정적으로: sticky 되는 순간 sentinel이 header 아래로 넘어가면 stuck
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        // entry가 "보이지 않게" 되면(=위로 넘어가면) sticky가 붙었다고 간주
+        controls.classList.toggle('is-stuck', !entry.isIntersecting);
+      },
+      {
+        root: null,
+        // header 높이만큼 위에서 잘라서 판단 (header 아래로 넘어가는 순간부터 stuck)
+        rootMargin: () => {
+          const headerH = parseInt(getComputedStyle(root).getPropertyValue('--header-h')) || 0;
+          // top쪽을 header만큼 줄여서 header 아래 기준으로 intersect 판단
+          return `-${headerH}px 0px 0px 0px`;
+        },
+        threshold: 0,
+      }
+    );
+
+    // ⚠️ rootMargin 함수형은 일부 브라우저에서 안 먹는 경우가 있어 재바인딩 방식으로 처리
+    // -> 아래처럼 "header 높이 바뀔 때" 다시 옵저버를 만들자.
+    return io;
+  }
+
+  // IntersectionObserver를 header 높이 변경 시 재설정(가장 안정적)
+  let io = null;
+  function setup(){
+    setHeaderH();
+
+    if (io) io.disconnect();
+    const controls = document.querySelector('.point-history__controls');
+    const sentinel = document.querySelector('.controls-sentinel');
+    if (!controls || !sentinel) return;
+
+    const headerH = parseInt(getComputedStyle(root).getPropertyValue('--header-h')) || 0;
+
+    io = new IntersectionObserver(([entry]) => {
+      controls.classList.toggle('is-stuck', !entry.isIntersecting);
+    },{
+      root: null,
+      rootMargin: `-${headerH}px 0px 0px 0px`,
+      threshold: 0,
+    });
+
+    io.observe(sentinel);
+  }
+
+  window.addEventListener('load', setup);
+  window.addEventListener('resize', setup);
+  window.addEventListener('orientationchange', setup);
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(setup);
+  }
+
+  // Safari에서 초기 계산 튐 방지 (주소창/툴바 변화)
+  setTimeout(setup, 50);
+  setTimeout(setup, 200);
+})();
+
+
+
+  // 다크모드 테스트
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('modeToggle');
+    const darkCssList = document.querySelectorAll('link[data-theme="dark"]');
+
+    if (!toggle || !darkCssList.length) return;
+
+    const savedMode = localStorage.getItem('darkMode') === 'on';
+    toggle.checked = savedMode;
+
+    darkCssList.forEach(link => {
+      link.disabled = !savedMode;
+    });
+
+    toggle.addEventListener('change', function () {
+      const isDark = this.checked;
+
+      darkCssList.forEach(link => {
+        link.disabled = !isDark;
+      });
+
+      localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+    });
+  });
+
+</script>
+
