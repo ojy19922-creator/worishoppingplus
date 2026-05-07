@@ -1,0 +1,576 @@
+/* =========================================================
+   Base / Scroll Fix
+========================================================= */
+:root{
+  --cta-h: 3.5rem;                 /* 56px */
+  --cta-pad-x: 0.375rem;           /* 6px */
+  --cta-pad-y: 1rem;               /* 16px */
+  --cta-bg: #f1f5f9;
+  --nav-h: 3.5rem;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+
+#index {
+  width: 100%;
+  min-height: 100svh;
+  height: auto;
+  overflow: visible;
+  background: var(--slate-100, #f1f5f9);
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100svh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background: var(--slate-100, #f1f5f9);
+}
+
+/* main이 실제로 늘어나면서 스크롤되게 */
+.content.content--notice {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: visible;
+  padding-bottom: 0;
+  background: var(--slate-100, #f1f5f9);
+  display: flex;
+  flex-direction: column;
+}
+
+/* notice 본문이 짧아도 하단 공백이 흰색으로 뜨지 않게 */
+.notice-page,
+.notice-schedule,
+.footer-notice,
+.footer-sign {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 모바일 크롬 주소창 대응 */
+@supports (height: 100dvh) {
+  #index,
+  .wrap {
+    min-height: 100dvh;
+  }
+}
+
+/* =========================================================
+   Header Nav
+========================================================= */
+.nav {
+  background: var(--slate-100, #f1f5f9);
+  border-bottom: 0.0625rem solid var(--gray-200, transparent);
+  padding: 1rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.nav__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__left,
+.nav__center,
+.nav__right {
+  display: flex;
+  align-items: center;
+}
+
+/* 좌/우 영역 폭을 동일하게 만들어 타이틀을 진짜 중앙 */
+.nav__left,
+.nav__right {
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+}
+
+.nav__back {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: block;
+}
+
+.nav__center {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;
+}
+
+.nav__title {
+  color: var(--gray-900, #181d27);
+  text-align: center;
+  font-family: var(--pretendard-h1-b-font-family, "Pretendard-Bold", sans-serif);
+  font-size: var(--pretendard-h1-b-font-size, 1rem);
+  line-height: var(--pretendard-h1-b-line-height, 1.5rem);
+  letter-spacing: var(--pretendard-h1-b-letter-spacing, -0.01875rem);
+  font-weight: var(--pretendard-h1-b-font-weight, 700);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav__spacer {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+/* =========================================================
+   Notice Page
+========================================================= */
+.notice-page {
+  background: var(--slate-100, #f1f5f9);
+  padding: 4rem 1rem 0;
+}
+
+.notice-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.notice-page__title,
+.notice-page__desc {
+  margin: 0;
+}
+
+.notice-page__title {
+  color: var(--gray-900, #181d27);
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.notice-page__desc {
+  width: 100%;
+  color: var(--gray-700, #414651);
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+/* =========================================================
+   Notice Schedule
+========================================================= */
+.notice-schedule {
+  position: relative;
+  padding: 5.5625rem 2rem 1.5rem;
+  background: var(--slate-100, #f1f5f9);
+}
+
+.notice-schedule__icon {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  padding: 0.625rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.notice-schedule__icon img {
+  width: 4.75rem;
+  height: 4.75rem;
+  border-radius: 1.25rem;
+  object-fit: cover;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.notice-schedule__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 4rem 2rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.125rem 0.4875rem rgba(0, 0, 0, 0.03);
+}
+
+.notice-schedule__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.notice-schedule__title,
+.notice-schedule__text,
+.notice-schedule__time-label,
+.notice-schedule__time-value {
+  margin: 0;
+}
+
+.notice-schedule__title {
+  color: var(--gray-900, #181d27);
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.notice-schedule__title span {
+  color: var(--c-point, #036635);
+}
+
+.notice-schedule__text {
+  color: var(--gray-700, #414651);
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.003em;
+  font-weight: 400;
+}
+
+.notice-schedule__text strong {
+  font-weight: 600;
+}
+
+.notice-schedule__time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1rem;
+  border: 0.0625rem solid #eeeeee;
+  border-radius: 1rem;
+  background: #f8f9fa;
+}
+
+.notice-schedule__time-label {
+  color: var(--c-point, #036635);
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.notice-schedule__time-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: #2d2d2d;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.notice-schedule__time-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 1.25rem;
+  display: block;
+}
+
+.notice-schedule__time-text {
+  display: block;
+}
+/* =========================================================
+   CTA - normal section (not floating)
+========================================================= */
+.floating-cta {
+  position: static;
+  width: 100%;
+  max-width: none;
+  transform: none;
+  padding: 1rem;
+  background: var(--slate-100, #f1f5f9);
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.floating-cta__inner {
+  width: 100%;
+}
+
+.floating-cta__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.5rem;
+  margin: 0;
+  padding: 0 1rem;
+  border-radius: 0.75rem;
+  background: var(--c-point, #036635);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.floating-cta__text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fcf7e4;
+  font-family: "PretendardVariable-SemiBold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.floating-cta__target {
+  display: inline-block;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 기존 플로팅 대응용 하단 여백 제거 */
+.content.content--notice {
+  padding-bottom: 0;
+}
+
+/* =========================================================
+   Footer Notice
+========================================================= */
+.footer-notice {
+  background: var(--slate-100, #f1f5f9);
+  padding: 0 1rem 1rem;
+}
+
+.footer-notice__title {
+  margin: 0;
+  padding: 0 0 0.625rem;
+  color: var(--gray-700, #414651);
+  font-family: "Pretendard-Bold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-notice__lead {
+  margin: 0 0 0.25rem;
+  color: var(--gray-700, #414651);
+  font-family: "Pretendard-Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-notice__list {
+  margin: 0 0 1rem;
+  padding-left: 0;
+  color: var(--gray-500, #717680);
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.02em;
+  white-space: normal;
+}
+
+.footer-notice__list:last-of-type {
+  margin-bottom: 0;
+}
+
+.footer-notice__list li {
+  margin: 0.25rem 0;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.footer-notice--default {
+  display: var(--footer-notice-default-display, block);
+}
+
+.footer-notice--wo {
+  display: var(--footer-notice-wo-display, none);
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+.footer-sign {
+  padding: 1rem 1.25rem;
+  background: #f1f5f9;
+}
+
+.footer-sign__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-sign__brand {
+  margin: 0;
+  flex: 1;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.footer-sign__copy {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #999999;
+}
+
+.footer-sign__links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-sign__links a {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* =========================================================
+   Footer v2
+========================================================= */
+.footer-sign.footer-sign--v2 .footer-sign__links {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+
+.footer-sign.footer-sign--v2 .footer-sign__policies {
+  display: flex;
+  gap: 0.4375rem;
+  align-items: center;
+}
+
+.footer-sign.footer-sign--v2 .footer-sign__policy {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #666666;
+  text-decoration: none;
+}
+
+.footer-sign.footer-sign--v2 .footer-sign__policy--strong {
+  font-weight: 700;
+}
+
+/* =========================================================
+   Desktop preview only
+========================================================= */
+@media (min-width: 580px) {
+  #index {
+    box-shadow: 0.1875rem 0.25rem 0.6875rem rgba(0, 0, 0, 0.125);
+    max-width: 28.75rem;
+    margin: 0 auto;
+  }
+
+  .wrap {
+    width: 28.75rem;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .footer-sign {
+    width: 28.75rem;
+    margin: 0 auto;
+  }
+    .floating-cta,
+  .footer-sign {
+    width: 28.75rem;
+    margin: 0 auto;
+  }
+}
+
+/* 다크모드 테스트 토글 */
+.mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.mode-toggle input {
+  display: none;
+}
+
+.mode-toggle span {
+  display: block;
+  width: 56px;
+  height: 32px;
+  border-radius: 999px;
+  background: #ddd;
+  position: relative;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.mode-toggle span::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.25s;
+}
+
+.mode-toggle input:checked + span {
+  background: #0B2BD6;
+}
+
+.mode-toggle input:checked + span::after {
+  transform: translateX(24px);
+}
+/* 다크모드 테스트 토글 */

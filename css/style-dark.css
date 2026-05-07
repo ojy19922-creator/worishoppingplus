@@ -1,0 +1,1256 @@
+@charset "UTF-8";
+
+/* =========================================================
+   COMMON DARK
+   - 공통 레이아웃 / 헤더 / 푸터 / 공통 아이콘
+========================================================= */
+.wrap,
+.content,
+.content--error {
+  background: #101214;
+  color: #F1F3F5;
+}
+
+.header,
+.nav,
+.footer-notice,
+.footer-sign,
+.error-view,
+.content--error .footer-sign {
+  background: #16181A;
+}
+
+.nav {
+  border-bottom: 0.0625rem solid #343A40;
+}
+
+.nav__title {
+  color: #F8F9FA;
+}
+
+.nav__icon,
+.guide-banner__chevron,
+.point-banner__close-icon,
+.tooltip-bubble__close-icon {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+.footer-notice__title,
+.footer-notice__lead {
+  color: #DEE2E6;
+}
+
+.footer-notice__list {
+  color: #B2BBC3;
+}
+
+.footer-notice__accent {
+  color: var(--c-point);
+}
+
+
+.footer-sign__brand,
+.footer-sign__links a,
+.footer-sign.footer-sign--v2 .footer-sign__policy {
+  color: #DEE2E6;
+}
+
+.footer-sign__copy {
+  color: #878F96;
+}
+
+/* 공통 surface */
+.modal__panel,
+.sheet__panel,
+.search-sheet__inner,
+.error-view__box {
+  background: #212528;
+}
+
+.modal__title,
+.sheet__title,
+.error-view__title,
+.error-view__message {
+  color: #F8F9FA;
+}
+
+.modal__body,
+.sheet__sub,
+.sheet__desc,
+.notice-list li,
+.search-sheet__title,
+.search-field__input,
+.search-empty__desc,
+.error-view__desc {
+  color: #B2BBC3;
+}
+
+
+
+/* 공통 버튼 */
+.cta,
+.floating-cta__btn,
+.bottom-action__btn,
+.plus-hero__chip {
+  color: #FFFFFF;
+}
+
+.ghost,
+.btn--light,
+.bottom-action__btn--ghost {
+  color: #DEE2E6;
+}
+
+.bottom-action,
+.floating-cta {
+  background: #16181A;
+}
+
+/* =========================================================
+   INDEX DARK
+   - index.html / style.css
+========================================================= */
+.point-summary,
+.plus-summary,
+.point-banner,
+.shop-section,
+.guide-banner,
+.banner-carousel {
+  background: #16181A;
+}
+
+.point-card,
+.plus-hero,
+.plus-card,
+.point-banner__box,
+.shop-card,
+.guide-banner__inner {
+  background: #212528;
+}
+
+.point-card__foot,
+.plus-card__next,
+.point-banner__badge {
+  background: #292D32;
+}
+
+.shop-card__logo {
+  background: #212528;
+}
+
+.point-card__title,
+.point-card__value,
+.plus-hero__value,
+.plus-card__title-text,
+.shop-section__title,
+.guide-banner__text {
+  color: #F8F9FA;
+}
+
+.point-card__meta-label,
+.point-card__meta-value,
+.point-card__next-label,
+.plus-hero__label,
+.plus-card__next-label,
+.plus-card__next-plus,
+.plus-card__next-value,
+.point-banner__text {
+  color: #DEE2E6;
+}
+
+.point-card__plus,
+.point-card__next-value {
+  color: #F1F3F5;
+}
+.point-card__history-text,
+.point-banner__sub {
+  color: #B2BBC3;
+}
+
+.point-card__history,
+.guide-banner__inner,
+.shop-card__logo {
+  border-color: #343A40;
+}
+
+.point-card__help-icon,
+.plus-card__help-icon {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+.tooltip-bubble__panel {
+  background: #16181A;
+}
+
+.tooltip-bubble__title {
+  color: #F8F9FA;
+}
+
+.tooltip-bubble__list {
+  color: #B2BBC3;
+}
+
+.shop-card__name {
+  color: #F1F3F5;
+}
+
+.shop-card__rate,
+.shop-top__rate,
+.howto__badge {
+  color: var(--c-point);
+}
+
+.banner-carousel__dot {
+  background: #495057;
+}
+
+.banner-carousel__dot.is-active {
+  background: #DEE2E6;
+}
+
+.point-card__coin,
+.shop-card__logo-img,
+.guide-banner__icon-img,
+.banner-carousel__img,
+.plus-hero__icon {
+  filter: none;
+}
+
+.guide-hero {
+  background: #16181A;
+}
+
+/* =========================================================
+   SHOP DETAIL DARK
+   - shopdetail.html / style-shop.css
+========================================================= */
+.shop-top,
+.howto,
+.cta-block,
+.recommend,
+.policy {
+  background: #16181A;
+}
+
+.info span {
+  color: #878F96;
+}
+
+.info img {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(8%) saturate(224%) hue-rotate(180deg) brightness(95%) contrast(92%);
+}
+
+.shop-top__mall,
+.howto__title,
+.recommend__title,
+.policy-card__title,
+.policy-notice__title,
+.recommend__price,
+.cta-block__btn-text,
+.howto__item-title {
+  color: #F8F9FA;
+}
+
+.shop-top__rate {
+  color: var(--c-point);
+}
+
+.howto__badge {
+  background: #292D32;
+  color: var(--c-point);
+}
+
+.howto__line {
+  background: #343A40;
+}
+
+.howto__item-desc,
+.cta-block__desc,
+.recommend__name,
+.policy-card__list,
+.policy-notice__sub {
+  color: #B2BBC3;
+}
+
+.howto__emph {
+  color: #F8F9FA;
+}
+
+.cta-block__btn,
+.recommend__thumb,
+.policy-card,
+.policy-notice {
+  background: #212528;
+}
+
+.recommend__thumb img{
+    border-radius: 6px;
+}
+
+.shop-toast {
+  background: #2A2E36;
+  color: #FFFFFF;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.24);
+}
+
+.shop-toast__accent {
+  color: #F8F9FA;
+}
+
+/* floating cta */
+:root {
+  --cta-bg: #16181A;
+}
+
+.floating-cta {
+  background: transparent;
+}
+
+.floating-cta__inner::before {
+  background: var(--cta-bg);
+}
+
+.floating-cta__btn {
+  background: var(--c-point);
+}
+
+.floating-cta__text {
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   GUIDE DARK
+   - guide.html / style-guide.css
+   - CTA only
+========================================================= */
+.floating-cta {
+  background: transparent;
+}
+
+.floating-cta::before {
+  background: #16181A;
+}
+
+.floating-cta__btn {
+  background: var(--c-point);
+}
+
+.floating-cta__text {
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   GUIDE DARK
+   - guide.html / style-guide.css
+========================================================= */
+
+/* 가이드 상단 */
+.guide-hero {
+  background: #16181A;
+}
+
+.guide-hero__title {
+  color: #F8F9FA;
+}
+
+.guide-hero__title-point {
+  color: var(--c-point);
+}
+
+.guide-hero__subtitle {
+  color: #B2BBC3;
+}
+
+/* 가이드 스텝 */
+.guide-step__inner {
+  border-bottom-color: #343A40;
+}
+
+.guide-step__title {
+  color: #F8F9FA;
+}
+
+.guide-step__desc {
+  color: #B2BBC3;
+}
+
+/* 일러스트/아이콘 */
+.guide-hero__illust,
+.guide-step__image {
+  filter: none;
+}
+
+/* CTA */
+.floating-cta {
+  background: transparent;
+}
+
+.floating-cta::before {
+  background: #16181A;
+}
+
+.floating-cta__btn {
+  background: var(--c-point);
+}
+
+.floating-cta__text {
+  color: #FFFFFF;
+}
+
+
+
+/* =========================================================
+   POINT HISTORY DARK
+   - point-history.html / style-history.css
+========================================================= */
+
+/* 페이지 기본 영역 */
+.point-history,
+.members-guide,
+.point-empty {
+  background: #16181A;
+}
+
+/* 월 선택 */
+.month-picker {
+  background: #212528;
+}
+
+.month-picker__ym {
+  color: #F8F9FA;
+}
+
+.month-picker__range {
+  color: #B2BBC3;
+}
+
+.month-picker__icon {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+/* 적립 내역 리스트 */
+.history-item {
+  background: #212528;
+}
+
+.history-item + .history-item {
+  border-top-color: #343A40;
+}
+
+.history-item__date,
+.history-item__merchant {
+  color: #F1F3F5;
+}
+
+.history-item__time {
+  color: #878F96;
+}
+
+/* 상태 컬러 */
+.history-item--earned .history-item__sign,
+.history-item--earned .history-item__value,
+.history-item--earned .history-item__unit,
+.history-item--earned .history-item__state {
+  color: var(--c-point);
+}
+
+.history-item--pending .history-item__sign,
+.history-item--pending .history-item__value {
+  color: #DEE2E6;
+}
+
+.history-item--pending .history-item__unit,
+.history-item--pending .history-item__state {
+  color: #B2BBC3;
+}
+
+.history-item--expired .history-item__sign,
+.history-item--expired .history-item__value,
+.history-item--expired .history-item__unit,
+.history-item--expired .history-item__state {
+  color: #878F96;
+}
+
+/* 꿀머니 수령 안내 */
+.members-guide {
+  background: #16181A;
+}
+
+.members-guide__eyebrow {
+  color: #B2BBC3;
+}
+
+.members-guide__title {
+  color: #F8F9FA;
+}
+
+.members-guide__desc {
+  color: #B2BBC3;
+}
+
+.members-guide__desc strong,
+.members-guide__desc-strong {
+  color: #E9ECEF;
+}
+
+.members-guide__button {
+  background: #2589F4;
+  color: #F8F9FA;
+}
+
+/* 적립 예정 없음 */
+.point-empty__title {
+  color: #F8F9FA;
+}
+
+.point-empty__desc {
+  color: #B2BBC3;
+}
+
+.point-empty__refresh {
+  background: #292D32;
+}
+
+.point-empty__refresh-text {
+  color: #B2BBC3;
+}
+
+/* 바텀시트 dim */
+.sheet__dim {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* 바텀시트 panel - 캡처 참고 */
+.sheet__panel {
+  background: #292D32;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.sheet__title {
+  color: #F8F9FA;
+}
+
+.sheet__close-icon {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(103%) contrast(101%);
+}
+
+.sheet__label {
+  background: transparent;
+}
+
+.sheet__label-text {
+  color: #F1F3F5;
+}
+
+.sheet__radio:checked + .sheet__label .sheet__label-text {
+  color: var(--c-point);
+}
+
+.sheet__label:hover {
+  background: #343A40;
+}
+
+.sheet__label:focus-visible {
+  outline: 0.125rem solid rgba(91, 61, 245, 0.35);
+  outline-offset: 0.125rem;
+  background: #343A40;
+}
+
+.sheet__submit {
+  background: var(--c-point);
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   NOTICE DARK
+   - notice.html / notice.css
+========================================================= */
+
+/* 페이지 기본 배경 */
+.notice-main,
+.notice-page,
+.notice-schedule,
+.content.content--notice {
+  background: #16181A;
+}
+
+/* 상단 메시지 */
+.notice-page__title {
+  color: #F8F9FA;
+}
+
+.notice-page__desc {
+  color: #B2BBC3;
+}
+
+/* 스케줄 섹션 */
+.notice-schedule__icon {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
+}
+
+.notice-schedule__card {
+  background: #212528;
+  box-shadow: 0 0.125rem 0.4875rem rgba(0, 0, 0, 0.18);
+}
+
+.notice-schedule__title {
+  color: #F8F9FA;
+}
+
+.notice-schedule__text {
+  color: #B2BBC3;
+}
+
+.notice-schedule__time-box {
+  background: #292D32;
+  border-color: #343A40;
+}
+
+.notice-schedule__time-label {
+  color: var(--c-point);
+}
+
+.notice-schedule__time-value {
+  color: #F1F3F5;
+}
+
+.notice-schedule__time-icon {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(103%) contrast(101%);
+}
+
+/* 일반형 CTA */
+.floating-cta {
+  background: #16181A;
+}
+
+.floating-cta__btn {
+  background: var(--c-point);
+}
+
+.floating-cta__text {
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   PLUS HISTORY DARK
+   - pluspoint-history.html / style-plushistory.css
+========================================================= */
+
+/* 페이지 기본 영역 */
+.point-history {
+  background: #16181A;
+}
+
+.point-history__controls .segmented{
+    background: #292D32;
+}
+
+/* 상단 컨트롤 sticky 영역 */
+.point-history__controls {
+  background: #212528;
+  border-bottom-color: transparent;
+}
+
+.point-history__controls.is-stuck {
+  border-bottom-color: #343A40;
+}
+
+/* segmented */
+.segmented {
+  background: #212528;
+}
+
+.segmented__tab {
+  color: #878F96;
+}
+
+.segmented__tab.is-active {
+  color: #E9ECEF;
+}
+
+.segmented__thumb {
+  background: #16181A;
+  box-shadow: 0rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.28);
+}
+
+/* month picker */
+.month-picker {
+  background: #212528;
+}
+
+.month-picker__ym {
+  color: #F8F9FA;
+}
+
+.month-picker__range {
+  color: #B2BBC3;
+}
+
+.month-picker__icon {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+/* 적립 리스트 */
+.history-item {
+  background: #212528;
+}
+
+.history-item + .history-item {
+  border-top-color: #343A40;
+}
+
+.history-item__date,
+.history-item__merchant {
+  color: #F1F3F5;
+}
+
+.history-item__time {
+  color: #878F96;
+}
+
+.history-item--earned .history-item__sign,
+.history-item--earned .history-item__value,
+.history-item--earned .history-item__unit,
+.history-item--earned .history-item__state {
+  color: var(--c-point);
+}
+
+.history-item--pending .history-item__sign,
+.history-item--pending .history-item__value {
+  color: #DEE2E6;
+}
+
+.history-item--pending .history-item__unit,
+.history-item--pending .history-item__state {
+  color: #B2BBC3;
+}
+
+.history-item--expired .history-item__sign,
+.history-item--expired .history-item__value,
+.history-item--expired .history-item__unit,
+.history-item--expired .history-item__state {
+  color: #878F96;
+}
+
+/* 사용 리스트 */
+.use-item {
+  background: #212528;
+}
+
+.use-item + .use-item {
+  border-top-color: #343A40;
+}
+
+.use-item__date,
+.use-item__title {
+  color: #F1F3F5;
+}
+
+.use-item__time {
+  color: #878F96;
+}
+
+.use-item__sign,
+.use-item__value {
+  color: #DEE2E6;
+}
+
+.use-item__unit,
+.use-item__state {
+  color: #B2BBC3;
+}
+
+/* 바텀시트 - point history와 동일 톤 */
+.sheet__dim {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sheet__panel {
+  background: #292D32;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.sheet__title {
+  color: #F8F9FA;
+}
+
+.sheet__close-icon {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(103%) contrast(101%);
+}
+
+.sheet__label {
+  background: transparent;
+}
+
+.sheet__label-text {
+  color: #F1F3F5;
+}
+
+.sheet__radio:checked + .sheet__label .sheet__label-text {
+  color: var(--c-point);
+}
+
+.sheet__label:hover {
+  background: #343A40;
+}
+
+.sheet__label:focus-visible {
+  outline: 0.125rem solid rgba(91, 61, 245, 0.35);
+  outline-offset: 0.125rem;
+  background: #343A40;
+}
+
+.sheet__submit {
+  background: var(--c-point);
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   ERROR DARK
+   - error.html / style.css
+========================================================= */
+.error-view {
+  background: #16181A;
+}
+
+.error-view__title {
+  color: #F8F9FA;
+}
+
+.error-view__desc {
+  color: #B2BBC3;
+}
+
+.error-view__box {
+  background: #212528;
+}
+
+.error-view__message {
+  color: #DEE2E6;
+}
+
+.content--error {
+  background: #16181A;
+}
+
+.content--error .footer-sign {
+  background: #16181A;
+}
+
+/* =========================================================
+   PLUSCON SHOP DARK
+   - pluscon-shop.html / style-pluscon-shop.css
+========================================================= */
+
+/* 상단 포인트 영역 */
+.point-summary {
+  background: #16181A;
+}
+
+.point-card {
+  background: #212528;
+}
+
+.point-card__title {
+  color: #B2BBC3;
+}
+
+.point-card__value {
+  color: #F8F9FA;
+}
+
+/* 카테고리 */
+.pluscon-category {
+  background: #16181A;
+}
+
+.pluscon-category__chip {
+  background: #292D32;
+  color: #B2BBC3;
+}
+
+.pluscon-category__chip.is-active {
+  background: #16181A;
+  color: #E9ECEF;
+}
+
+/* 상품 섹션 */
+.shop-section {
+  background: #16181A;
+}
+
+.shop-section__title {
+  color: #F8F9FA;
+}
+
+/* 보기 토글 */
+.view-toggle {
+  background: #292D32;
+}
+
+.view-toggle__btn {
+  background: transparent;
+}
+
+.view-toggle__btn.is-active {
+  background: #16181A;
+}
+
+/* 아이콘이 어두우면 반전 */
+.view-toggle__btn .view-toggle__icon {
+  filter: none;
+}
+
+/* 상품 카드 공통 */
+.product-card {
+  background: #212528;
+}
+
+.product-card__thumb {
+  background: #2B3138;
+}
+
+.product-card__brand {
+  color: #878F96;
+}
+
+.product-card__name {
+  color: #F1F3F5;
+}
+
+.product-card__point,
+.product-card__unit {
+  color: var(--c-point);
+}
+
+/* grid/list 공통 화살표 */
+.product-card__arrow {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+/* grid */
+.product-list--grid .product-card {
+  background: #212528;
+}
+
+.product-list--grid .product-card__thumb {
+  background: #2B3138;
+}
+
+.product-list--grid .product-card__brand {
+  color: #878F96;
+}
+
+.product-list--grid .product-card__name {
+  color: #F1F3F5;
+}
+
+.product-list--grid .product-card__point,
+.product-list--grid .product-card__unit {
+  color: var(--c-point);
+}
+
+/* list */
+.product-list--list .product-card {
+  background: #212528;
+}
+
+.product-list--list .product-card__thumb {
+  background: #2B3138;
+}
+
+.product-list--list .product-card__brand {
+  color: #878F96;
+}
+
+.product-list--list .product-card__name {
+  color: #F1F3F5;
+}
+
+/* 플러스콘 footer는 공통 다크가 이미 있으면 생략 가능하지만 안전하게 유지 */
+.footer-sign {
+  background: #16181A;
+}
+
+.footer-sign__brand,
+.footer-sign__links a,
+.footer-sign.footer-sign--v2 .footer-sign__policy {
+  color: #DEE2E6;
+}
+
+.footer-sign__copy {
+  color: #878F96;
+}
+
+/* =========================================================
+   PLUSCON DETAIL DARK
+   - pluscon-detail.html / style-pluscon-detail.css
+========================================================= */
+
+/* 본문 기본 */
+.content--flex {
+  background: #16181A;
+}
+
+/* 타이틀 */
+.detail-title__brand {
+  color: #B2BBC3;
+}
+
+.detail-title__name {
+  color: #F8F9FA;
+}
+
+/* 상품 이미지 */
+.detail-image__box {
+  background: #2B3138;
+}
+
+/* 포인트 박스 */
+.point-box {
+  background: #212528;
+  border-color: #212528;
+}
+
+.point-box__top {
+  background: #212528;
+}
+
+.point-box__bottom {
+  background: #292D32;
+}
+
+.point-box__label,
+.point-box__val {
+  color: #F1F3F5;
+}
+
+.point-box__label--gray,
+.point-box__val--gray {
+  color: #B2BBC3;
+}
+
+/* 구매 가능 배지 */
+.badge--green {
+  background: rgba(91, 61, 245, 0.16);
+  color: var(--c-point);
+}
+
+/* 교환 불가 배지/문구 */
+.badge--red {
+  background: rgba(251, 86, 82, 0.16);
+  color: #FF8A84;
+}
+
+.point-box__label--red,
+.point-box__val--red {
+  color: #FF8A84;
+}
+
+/* 입력 폼 */
+.detail-form__title {
+  color: #F8F9FA;
+}
+
+.input-text {
+  background: #212528;
+  border-color: #343A40;
+  color: #F1F3F5;
+}
+
+.input-text::placeholder {
+  color: #878F96;
+}
+
+.input-text:focus {
+  border-color: #6D747B;
+}
+
+/* 동의 영역 */
+.agree-row__btn {
+  color: #B2BBC3;
+}
+
+.agree-row__btn img {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(179%) hue-rotate(180deg) brightness(99%) contrast(95%);
+}
+
+.checkbox-agree__custom {
+  border-color: #495057;
+  background: #212528;
+}
+
+.checkbox-agree__input:checked + .checkbox-agree__custom {
+  background: #16181A;
+  border-color: #16181A;
+}
+
+.detail-form__notice {
+  color: #FF8A84;
+}
+
+/* disabled */
+.detail-form--disabled .input-text {
+  background: #1B2026;
+  border-color: #343A40;
+  color: #6D747B;
+}
+
+.detail-form--disabled .input-text::placeholder {
+  color: #6D747B;
+}
+
+.detail-form--disabled .agree-row__btn {
+  color: #6D747B;
+}
+
+.detail-form--disabled .checkbox-agree__custom {
+  background: #1B2026;
+  border-color: #343A40;
+}
+
+/* 하단 안내 */
+.detail-notice {
+  background: #16181A;
+}
+
+.detail-notice__title {
+  color: #DEE2E6;
+}
+
+.detail-notice__content,
+.detail-notice__item,
+.detail-notice__subtitle {
+  color: #B2BBC3;
+}
+
+/* 하단 고정 CTA */
+.bottom-action {
+ 
+  background: transparent;
+}
+
+.bottom-action__inner {
+  background: transparent;
+}
+
+.bottom-action.is-slate .bottom-action__inner {
+  
+  background: #16181A;
+}
+
+.bottom-action.is-white .bottom-action__inner {
+  background: transparent;
+}
+
+.btn-primary {
+  background: var(--c-point);
+  color: #FFFFFF;
+}
+
+.btn-primary--disabled {
+  background: #495057;
+  color: #B2BBC3;
+}
+
+/* 교환 완료 */
+.detail-complete__badge {
+  background: rgba(91, 61, 245, 0.16);
+  color: var(--c-point);
+}
+
+.detail-complete__desc {
+  color: #DEE2E6;
+}
+
+/* 모달 */
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal__dialog {
+  background: #292D32;
+}
+
+.modal__title {
+  color: #F8F9FA;
+}
+
+.modal__desc {
+  color: #B2BBC3;
+}
+
+.modal-phone-box {
+  background: #212528;
+  border-color: #343A40;
+}
+
+.modal-phone-box__text {
+  color: #F1F3F5;
+}
+
+/* 테이블형 약관 */
+.modal-table {
+  background: #212528;
+  border-color: #343A40;
+}
+
+.modal-table__row {
+  border-color: #343A40;
+}
+
+.modal-table__label {
+  color: #B2BBC3;
+}
+
+.modal-table__val {
+  color: #F1F3F5;
+}
+
+/* 모달 버튼 */
+.btn-confirm {
+  background: var(--c-point);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: #212528;
+  color: #DEE2E6;
+  border-color: #343A40;
+}
+
+/* =========================================================
+   SHOP DETAIL BENEFIT MODAL DARK
+========================================================= */
+.modal__dim {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.benefit-modal {
+  background: #212528;
+}
+
+.benefit-modal__title,
+.benefit-modal__notice {
+  color: #F8F9FA;
+}
+
+.benefit-modal__info {
+  background: #292D32;
+}
+
+.benefit-modal__desc,
+.benefit-modal__text {
+  color: #DEE2E6;
+}
+
+.benefit-modal__text--strong {
+  color: #F8F9FA;
+}
+
+.benefit-modal__confirm {
+  background: var(--c-point);
+  color: #FFFFFF;
+}
